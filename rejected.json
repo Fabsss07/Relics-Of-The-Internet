@@ -1,0 +1,62 @@
+[
+  {
+    "url": "http://www.synapses.co.uk/astro",
+    "keep": false,
+    "reason": "dead or unreadable: fetch failed"
+  },
+  {
+    "url": "https://www.honestgamers.com/",
+    "keep": false,
+    "reason": "dead or unreadable: fetch failed"
+  },
+  {
+    "url": "http://retrohackers.net/",
+    "keep": false,
+    "reason": "banned keyword in URL"
+  },
+  {
+    "url": "https://www.devever.net/~hl/pics",
+    "keep": false,
+    "reason": "dead or unreadable: not html (application/xhtml+xml; charset=utf-8)"
+  },
+  {
+    "url": "http://www.midishack.net/guests4.htm",
+    "keep": false,
+    "reason": "banned keyword in URL"
+  },
+  {
+    "url": "http://www.midishack.net/guests.htm",
+    "keep": false,
+    "reason": "banned keyword in URL"
+  },
+  {
+    "url": "http://www.midishack.net/guests3.htm",
+    "keep": false,
+    "reason": "banned keyword in URL"
+  },
+  {
+    "url": "http://www.midishack.net/guests8.htm",
+    "keep": false,
+    "reason": "banned keyword in URL"
+  },
+  {
+    "url": "http://www.advantageseoservices.com/customers.php",
+    "keep": false,
+    "reason": "dead or unreadable: fetch failed"
+  },
+  {
+    "url": "http://alison.hine.net/",
+    "keep": false,
+    "reason": "dead or unreadable: HTTP 403"
+  },
+  {
+    "url": "http://www.call-with-current-continuation.org/rants/system-software-research.txt",
+    "keep": false,
+    "reason": "dead or unreadable: not html (text/plain)"
+  },
+  {
+    "url": "https://www.djc.com/news/ae/11151054.html",
+    "keep": false,
+    "reason": "dead or unreadable: fetch failed"
+  }
+]
