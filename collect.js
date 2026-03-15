@@ -19,13 +19,9 @@ const SEARCH_TERMS = [
   '90s website',
   '2000s website',
   'home on the web',
-  'cyber shrine',
   'cyberspace',
   'world wide web',
-  'internet archive style',
   'retro html',
-  'vintage website',
-  'vintage web',
   'old school website',
   'web design 1999',
   'web design 2000',
@@ -53,6 +49,28 @@ const SEARCH_TERMS = [
   'frameset',
   'html 3.2',
   'html 4.0',
+  'personal home page',
+  'my personal homepage',
+  'home sweet homepage',
+  'my little corner of the web',
+  'welcome to my corner of the web',
+  'html homepage',
+  'hand coded html',
+  'hand coded website',
+  'home on the net',
+  'net shrine',
+  'webmaster links',
+  'favorite sites',
+  'my favorite links',
+  'cool sites',
+  'best viewed in netscape',
+  'best viewed at 800x600',
+  'best viewed with frames',
+  'counter',
+  'visitor counter',
+  'web counter',
+  'mail me',
+  'email me',
   'old school html',
 
   // personal / diary / blog vibes
@@ -66,13 +84,19 @@ const SEARCH_TERMS = [
   'about me',
   'about this site',
   'who am i',
-  'my life',
   'my photos',
   'photo album',
   'family photos',
   'vacation photos',
+  'online journal',
+  'personal thoughts',
+  'my story',
+  'my world',
+  'my corner of the web',
+  'my family page',
+  'friends page',
 
-  // fandom / shrine culture
+  // fandom
   'fan page',
   'fansite',
   'fan site',
@@ -92,12 +116,18 @@ const SEARCH_TERMS = [
   'mario fan page',
   'sonic fan page',
   'kingdom hearts fan page',
+  'rock music fan page',
   'anime fansite',
   'jpop fan page',
   'boy band fan page',
   'britney spears fan page',
   'linkin park fan page',
   'evanescence fan page',
+  'tribute page',
+  'tribute site',
+  'fan shrine',
+  'character fan page',
+  'anime character shrine',
 
   // gaming
   'retro games',
@@ -105,7 +135,6 @@ const SEARCH_TERMS = [
   'video game shrine',
   'game fan page',
   'cheat codes',
-  'walkthrough',
   'game walkthrough',
   'boss guide',
   'level guide',
@@ -128,14 +157,19 @@ const SEARCH_TERMS = [
   'gamecube fan page',
   'retro pc games',
   'flash games page',
-  'gaming links',
+  'nintendo fan page',
+  'game review page',
+  'retro game guide',
+  'old game cheats',
+  'game screenshots',
+  'minecraft',
+  'flash game links',
 
   // music
   'music fan page',
   'band fan page',
   'album review page',
   'lyrics page',
-  'mp3 page',
   'midi music page',
   'vintage music website',
   'retro music page',
@@ -148,6 +182,11 @@ const SEARCH_TERMS = [
   'music shrine',
   'artist shrine',
   'music links',
+  'artist fan page',
+  'music reviews',
+  'album reviews',
+  'concert photos',
+  'mp3 collection',
   'discography page',
   'music collection page',
 
@@ -167,6 +206,12 @@ const SEARCH_TERMS = [
   'buffy fan page',
   'simpsons fan page',
   'cartoon network fan page',
+  'movie screenshots',
+  'tv screenshots',
+  'episode guide',
+  'character guide',
+  'cult movie fan page',
+  'cartoon fan page',
 
   // tech / computing
   'computer tips',
@@ -177,21 +222,23 @@ const SEARCH_TERMS = [
   'learn html',
   'webmaster tips',
   'computer hobby page',
-  'linux personal page',
   'unix fan page',
   'programming links',
   'javascript tutorial old',
-  'computer links',
-  'download utilities',
-  'freeware page',
-  'shareware page',
+  'windows 95 tips',
+  'computer tutorials',
+  'old internet tips',
+  'html help page',
+  'web design tips',
+  'personal computer page',
+  'computer archive',
+  'software archive',
 
-  // hobbies / niche weirdness
+  // hobbies
   'train hobby page',
   'lego fan page',
   'doll fan page',
   'stamp collection page',
-  'coin collection page',
   'model trains homepage',
   'ham radio homepage',
   'astronomy homepage',
@@ -209,6 +256,15 @@ const SEARCH_TERMS = [
   'cat homepage',
   'dog homepage',
   'pet homepage',
+  'fan fiction page',
+  'fanfic archive',
+  'sci fi homepage',
+  'fantasy homepage',
+  'dragon homepage',
+  'vampire page',
+  'goth page',
+  'roleplaying page',
+  'roleplaying homepage',
 
   // geography / schools / clubs
   'school homepage',
@@ -220,12 +276,16 @@ const SEARCH_TERMS = [
   'europe travel page',
   'japan travel page',
   'student homepage',
+  'unofficial school page',
+  'class project homepage',
+  'student project page',
+  'community homepage',
+  'town homepage',
 
   // random old-web language
   'cool page',
   'totally awesome website',
-  'awesome links',
-  'what\'s new page',
+  "what's new page",
   'site map',
   'awards page',
   'adopt a pixel',
@@ -236,17 +296,17 @@ const SEARCH_TERMS = [
   'enter site',
   'skip intro',
   'splash page'
-];
+]
 
 const MAX_PAGES_PER_TERM = 10
-const MAX_RESULTS = 10000
+const MAX_RESULTS = 11000
 
 function normalizeUrl(rawUrl) {
   try {
     const url = new URL(rawUrl)
-    url.hash = ""
+    url.hash = ''
 
-    if (url.pathname.endsWith("/") && url.pathname !== "/") {
+    if (url.pathname.endsWith('/') && url.pathname !== '/') {
       url.pathname = url.pathname.slice(0, -1)
     }
 
@@ -269,53 +329,38 @@ function shuffleArray(array) {
 
 function looksBad(url) {
   const badWords = [
-    "porn",
-    "sex",
-    "xxx",
-    "viagra",
-    "drugs",
-    "nude",
-    "guns",
-    "weapon",
-    "adult"
+    'porn',
+    'sex',
+    'xxx',
+    'viagra',
+    'drugs',
+    'nude',
+    'guns',
+    'weapon',
+    'cocaine',
+    'darkweb',
+    'adult',
+    'download',
+    'setup',
+    'install',
+    '.exe',
+    '.zip',
+    '.rar',
+    'torrent'
   ]
 
   const lower = url.toLowerCase()
   return badWords.some(word => lower.includes(word))
 }
 
-async function isAliveHtml(url) {
-  try {
-    const controller = new AbortController()
-    const timeout = setTimeout(() => controller.abort(), 8000)
-
-    const res = await fetch(url, {
-      method: "GET",
-      redirect: "follow",
-      signal: controller.signal,
-      headers: {
-        "User-Agent": "retro-web-randomizer/1.0"
-      }
-    })
-
-    clearTimeout(timeout)
-
-    if (!res.ok) return false
-
-    const contentType = res.headers.get("content-type") || ""
-
-    if (!contentType.includes("text/html")) return false
-
-    return true
-  } catch {
-    return false
-  }
-}
-
 async function fetchWibyResults(query, page = 1) {
   const apiUrl = `https://wiby.me/json/?q=${encodeURIComponent(query)}&p=${page}`
 
-  const res = await fetch(apiUrl)
+  const res = await fetch(apiUrl, {
+    headers: {
+      'User-Agent': 'web-relics/1.0'
+    }
+  })
 
   if (!res.ok) throw new Error(`Wiby error ${res.status}`)
 
@@ -347,22 +392,14 @@ async function gatherCandidates() {
           if (!normalized) continue
           if (looksBad(normalized)) continue
 
-          if (uniqueUrls.has(normalized)) continue
-
-          const alive = await isAliveHtml(normalized)
-
-          if (!alive) continue
-
           uniqueUrls.add(normalized)
-
-          console.log("✓", normalized)
 
           if (uniqueUrls.size >= MAX_RESULTS) {
             return [...uniqueUrls]
           }
         }
       } catch (error) {
-        console.log(`Failed "${term}" page ${page}:`, error.message)
+        console.log(`Failed "${term}" page ${page}: ${error.message}`)
       }
     }
   }
@@ -374,11 +411,15 @@ async function main() {
   const candidates = await gatherCandidates()
 
   await fs.writeFile(
-    "relics.json",
-    JSON.stringify(candidates.map(url => ({ url })), null, 2)
+    'relics.json',
+    JSON.stringify(candidates.map(url => ({ url })), null, 2),
+    'utf8'
   )
 
-  console.log(`Saved ${candidates.length} working relic websites`)
+  console.log(`Saved ${candidates.length} relic websites`)
 }
 
-main()
+main().catch(err => {
+  console.error(err)
+  process.exit(1)
+})

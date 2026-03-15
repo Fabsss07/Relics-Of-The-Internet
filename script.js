@@ -1,5 +1,52 @@
 const randomBtn = document.getElementById("randomBtn")
 
+const taglines = [
+
+"The Internet’s Time Machine",
+
+"Explore forgotten corners of the early web",
+
+"Discover websites over 20 years old",
+
+"The Internet’s Checkpoint",
+
+"Relics of the Web",
+
+"Lost In Time",
+
+"The Internet’s History Museum",
+
+"Forgotten pages of the web",
+
+"Back when websites were weird",
+
+"Discover abandoned corners of the web",
+
+"Feelin' old yet?",
+
+"Powered by 90s HTML",
+
+"Early 2000s web vibes",
+
+"Where forgotten websites live on",
+
+"Its legacy still lives on",
+
+"Nostalgia vibes",
+
+"Click if you dare",
+
+"The internet’s hidden gems"
+
+]
+
+const taglineElement = document.getElementById("tagline")
+
+const randomIndex = Math.floor(Math.random() * taglines.length)
+
+taglineElement.textContent = taglines[randomIndex]
+
+
 let websites = []
 let queue = []
 let history = []
@@ -33,19 +80,26 @@ fetch("./relics.json")
     websites = data
     refillQueue()
   })
+  .catch(error => {
+    console.error("Failed to load relics.json:", error)
+  })
 
 randomBtn.addEventListener("click", () => {
   if (queue.length === 0) {
     refillQueue()
   }
 
-  const website = queue.shift()
+  if (queue.length === 0) {
+    alert("No websites available right now.")
+    return
+  }
 
+  const website = queue.shift()
   history.push(website)
 
   if (history.length > 1000) {
     history.shift()
   }
 
-  window.open(website.url, "_blank")
+  window.open(website.url, "_blank", "noopener,noreferrer")
 })
