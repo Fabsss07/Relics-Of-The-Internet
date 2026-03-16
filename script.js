@@ -16,7 +16,7 @@ const taglines = [
 
 "Forgotten pages of the web",
 
-"Discover abandoned corners of the web",
+"Discover abandoned internet websites",
 
 "Feelin' old yet?",
 
