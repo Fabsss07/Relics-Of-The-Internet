@@ -6,19 +6,15 @@ const taglines = [
 
 "Explore forgotten corners of the early web",
 
-"Discover websites over 20 years old",
+"Discover websites from the early days",
 
 "The Internet’s Checkpoint",
 
 "Relics of the Web",
 
-"Lost In Time",
-
 "The Internet’s History Museum",
 
 "Forgotten pages of the web",
-
-"Back when websites were weird",
 
 "Discover abandoned corners of the web",
 
