@@ -8,11 +8,11 @@ const taglines = [
 
 "A Trip down Memory Lane",
 
-"Disclaimer: May cause intense Nostalgia",
+"Disclaimer: May Cause Intense Nostalgia",
 
-"Explore forgotten corners of the early web",
+"Explore Forgotten Corners of the Early Web",
 
-"Discover websites from the early days",
+"Discover Websites From the Early Days",
 
 "The Internet’s Checkpoint",
 
@@ -20,25 +20,25 @@ const taglines = [
 
 "The Internet’s History Museum",
 
-"Forgotten pages of the web",
+"Forgotten Pages of the Web",
 
-"Discover abandoned internet websites",
+"Discover Abandoned Internet Websites",
 
-"Feelin' old yet?",
+"Feelin’ Old Yet?",
 
 "Powered by 90s HTML",
 
-"Early 2000s web vibes",
+"Early 2000s Web Vibes",
 
-"Where forgotten websites live on",
+"Where Forgotten Websites Live On",
 
-"Its legacy still lives on",
+"Its Legacy Still Lives On",
 
-"Nostalgia vibes",
+"Nostalgia Vibes",
 
-"Click if you dare",
+"Click If You Dare",
 
-"The internet’s hidden gems"
+"The Internet’s Hidden Gems"
 
 ]
 

@@ -266,7 +266,7 @@ const SEARCH_TERMS = [
   'roleplaying page',
   'roleplaying homepage',
 
-  // geography / schools / clubs
+  // schools / clubs
   'school homepage',
   'class homepage',
   'club homepage',
