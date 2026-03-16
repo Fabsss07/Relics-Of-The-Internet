@@ -4,6 +4,12 @@ const taglines = [
 
 "The Internet’s Time Machine",
 
+"Preserving the Internet's Classics",
+
+"A Trip down Memory Lane",
+
+"Disclaimer: May cause intense Nostalgia",
+
 "Explore forgotten corners of the early web",
 
 "Discover websites from the early days",
