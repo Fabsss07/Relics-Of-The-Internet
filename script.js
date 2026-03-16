@@ -22,7 +22,7 @@ const taglines = [
 
 "Forgotten Pages of the Web",
 
-"Discover Abandoned Internet Websites",
+"Discover Forgotten Websites",
 
 "Feelin’ Old Yet?",
 
@@ -30,7 +30,7 @@ const taglines = [
 
 "Early 2000s Web Vibes",
 
-"Where Forgotten Websites Live On",
+"Where Abandoned Websites Live On",
 
 "Its Legacy Still Lives On",
 
@@ -45,6 +45,23 @@ const taglines = [
 const taglineElement = document.getElementById("tagline")
 
 const randomIndex = Math.floor(Math.random() * taglines.length)
+
+const curatedSites = [
+  "https://www.spacejam.com/1996/",
+  "http://info.cern.ch/",
+  "https://www.arngren.net/",
+  "https://sheep.horse/2011/5/minecraft_creeper_shirt.html",
+  "https://minecraftpedia.neocities.org/",
+  "https://www.wdell.com/videogames/sm64/Default.aspx",
+  "https://stringanomaly.com/blog/minecraft-firee-wtfffffff/",
+  "https://www.cameronsworld.net/",
+  "https://www.heavensgate.com/",
+  "https://flyingomelette.com/oddities/dk64index.html",
+  "https://www.vgmuseum.com/",
+  "https://zombo.com/"
+];
+
+let firstVisit = !localStorage.getItem("webRelicsVisited");
 
 taglineElement.textContent = taglines[randomIndex]
 
@@ -87,6 +104,17 @@ fetch("./relics.json")
   })
 
 randomBtn.addEventListener("click", () => {
+  if (firstVisit) {
+    firstVisit = false
+    localStorage.setItem("webRelicsVisited", "true")
+
+    const curatedIndex = Math.floor(Math.random() * curatedSites.length)
+    const curatedUrl = curatedSites[curatedIndex]
+
+    window.open(curatedUrl, "_blank", "noopener,noreferrer")
+    return
+  }
+
   if (queue.length === 0) {
     refillQueue()
   }
