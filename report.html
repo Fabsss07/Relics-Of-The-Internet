@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Relics</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+
+  <body class="report-body">
+    <main class="report-body">
+      <h1>Report a Website</h1>
+
+      <p>
+        Found a broken, suspicious, or inappropriate website? Report it here.
+      </p>
+
+      <form action="https://formspree.io/f/xqeygljd" method="POST">
+        <label>Website URL</label>
+        <input
+          type="url"
+          name="url"
+          required
+          placeholder="https://example.com"
+        />
+
+        <label>Reason</label>
+        <select name="reason">
+          <option>Broken Link</option>
+          <option>Inappropriate Content</option>
+          <option>Malicious Content</option>
+          <option>Other</option>
+        </select>
+
+        <label>Additional Details (Optional)</label>
+        <textarea name="message" rows="4"></textarea>
+
+        <button type="submit" class="relic-btn">Submit Report</button>
+      </form>
+
+      <p class="back-link">
+        <a href="index.html" class="footer-link">← Back</a>
+      </p>
+    </main>
+  </body>
+</html>

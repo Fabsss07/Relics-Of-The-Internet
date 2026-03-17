@@ -238,3 +238,39 @@ body {
   }
 
 }
+
+body.report-body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
+
+.report-body p:first-of-type {
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+input, textarea, select {
+  padding: 10px;
+  background: #111;
+  border: 1px solid #333;
+  color: #eee;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.footer-link,
+.footer-link:visited {
+  color: #999;
+}

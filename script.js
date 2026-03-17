@@ -58,6 +58,8 @@ const curatedSites = [
   "https://www.heavensgate.com/",
   "https://flyingomelette.com/oddities/dk64index.html",
   "https://www.vgmuseum.com/",
+  "https://randomminecraftforum.neocities.org/",
+  "https://minecraftodditieswiki.neocities.org/",
   "https://zombo.com/"
 ];
 
