@@ -274,3 +274,26 @@ textarea {
 .footer-link:visited {
   color: #999;
 }
+
+.report-link {
+  margin-top: 36px;
+}
+
+.report-link a {
+  color: #999;
+  text-decoration: none;
+  border-bottom: 1px dotted #777;
+}
+
+.report-link a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.legal-body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
