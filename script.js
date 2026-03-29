@@ -60,6 +60,7 @@ const curatedSites = [
   "https://www.vgmuseum.com/",
   "https://randomminecraftforum.neocities.org/",
   "https://minecraftodditieswiki.neocities.org/",
+  "https://spork.org/",
   "https://zombo.com/"
 ];
 
